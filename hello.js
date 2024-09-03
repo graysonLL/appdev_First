@@ -8,6 +8,11 @@ const rl = readline.createInterface({
 });
 
 rl.question("What's your name? ", function (name) {
-  console.log(`Hello, ${name}!`);
+  if(name.trim()) {
+    console.log(`Hello, ${name}!`);
+  } else {
+    console.log('Error: please enter a name.');
+  }
+  
   rl.close();
 });
